@@ -483,6 +483,9 @@
   .navbar-expand-md .navbar-nav {
     gap: 0rem;
   }
+  .navbar_icon {
+    top: 1.8rem;
+  }
   .top_left ul {
     display: block;
     text-align: center;

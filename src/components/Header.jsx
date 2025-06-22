@@ -117,11 +117,11 @@ const Header = () => {
           </div>
 
           <ul className="right_menu">
-            <li className="search-icon">
+            {/* <li className="search-icon">
               <button id="search-btn">
                 <i className="fa fa-search" aria-hidden="true"></i>
               </button>
-            </li>
+            </li> */}
             <li className="get-quote-btn d-lg-block d-md-block d-block">
               <button data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 Get Quote <i className="fa fa-angle-right" aria-hidden="true"></i>
