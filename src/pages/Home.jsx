@@ -6,7 +6,6 @@ import Projects from '../components/Projects'
 import Choose from '../components/Choose'
 import Process from '../components/Process'
 import Counter from '../components/Counter'
-import Footer from '../components/Footer'
 
 const Home = () => {
   return (
