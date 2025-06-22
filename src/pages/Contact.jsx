@@ -30,7 +30,7 @@ const Contact = () => {
                 </li>
                 <li>
                   <p className="phone-icon">
-                    <i className="fa fa-envelope-o" aria-hidden="true"></i>
+                    <i className="fa fa-envelope" aria-hidden="true"></i>
                   </p>
                   <h3>Mail</h3>
                   <span>{contactDetails.email}</span>
