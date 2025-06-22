@@ -10,6 +10,8 @@ import project3 from '../assets/images/echoshop.jpg';
 import project3Large from '../assets/images/echoshop.png';
 import project4 from '../assets/images/petmenia.jpg';
 import project4Large from '../assets/images/petmenia.png';
+import project5 from '../assets/images/petmenia.jpg';
+import project5Large from '../assets/images/petmenia.png';
 // 👉 Add more as needed...
 
 const projects = [
@@ -37,7 +39,12 @@ const projects = [
     largeImage: project4Large,
     liveLink: 'http://mydem06.unaux.com',
   },
-  // ✨ Add more project entries here
+  {
+    title: 'Petmenia',
+    image: project5,
+    largeImage: project5Large,
+    liveLink: 'http://mydem06.unaux.com',
+  }
 ];
 
 const sliderSettings = {
