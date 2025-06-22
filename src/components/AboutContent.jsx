@@ -1,6 +1,7 @@
 import React from 'react';
 import about1 from '../assets/images/about-1.png'
 import about2 from '../assets/images/about-2.jpg'
+import { useNavigate } from 'react-router-dom';
 
 const aboutData = {
   experienceYears: '10 Years',
@@ -28,6 +29,7 @@ const aboutData = {
 };
 
 const About = () => {
+  const navigate = useNavigate();
   return (
     <section className="about-area custom_gap">
       <div className="container">
@@ -75,7 +77,7 @@ const About = () => {
                 </div>
               ))}
 
-              <button className="btn button common-btn position-relative" onClick={() => window.location.href = '/about'}>
+              <button className="btn button common-btn position-relative" onClick={() => navigate('/about')}>
                 About Us
               </button>
             </div>
