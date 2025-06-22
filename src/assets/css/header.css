@@ -51,7 +51,7 @@
   margin-left: 2rem;
 }
 .get-quote-btn button {
-  background-color: #3c72fc;
+  background-color: #264293;
   color: #fff;
   padding: 1rem 2rem;
   font-size: 1.6rem;
@@ -99,7 +99,7 @@
 .call-now span {
   font-size: 1.8rem;
   font-weight: 500;
-  color: #3c72fc;
+  color: #264293;
 }
 .get-quote-btn i {
   margin-left: 1rem;
@@ -219,7 +219,7 @@
   height: 2px;
   border-radius: 2px;
   transition: all 0.2s, background 0s;
-  background: #3c72fc;
+  background: #264293;
 }
 .navbar_icon .line2 {
   top: 9.5px;
@@ -266,7 +266,7 @@
 .dropdown-item:focus,
 .dropdown-item:hover {
   color: #fff;
-  background-color:#3c72fc;
+  background-color:#264293;
   ;
   transition: 0.7s;
 }
@@ -514,7 +514,7 @@
     background-color: transparent;
   }
   .bg-mb {
-    background-color: #3c72fc;
+    background-color: #264293;
     color: #fff;
     padding: 1rem 0rem;
   }
@@ -567,7 +567,7 @@
   }
 
   .primary_nav .nav-item {
-    border-bottom: 1px solid #3c72fc;
+    border-bottom: 1px solid #264293;
     z-index: 1;
   }
 
@@ -627,7 +627,7 @@
   .dropdown-item:focus,
   .dropdown-item:hover {
     color: #fff;
-    background-color: #3c72fc;
+    background-color: #264293;
   }
   .primary_nav .nav-item {
     padding: 0rem 0rem;

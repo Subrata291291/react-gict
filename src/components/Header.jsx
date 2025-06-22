@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import logo from '../assets/images/logo.png'
 
 const Header = () => {
   const [dateTime, setDateTime] = useState(new Date());
@@ -64,7 +65,7 @@ const Header = () => {
       <nav className="navbar navbar-expand-md">
         <div className="container position-relative">
           <Link className="navbar-brand" to="/" title="Gict Solutions" rel="home">
-            <img src="http://localhost/gictsolutions/wp-content/uploads/2024/05/logo-1.png" alt="Gict Solutions" />
+            <img src={logo} alt="Gict Solutions" />
           </Link>
 
           <button className="navbar-toggler p-0 border-0" data-bs-toggle="offcanvas" href="#offcanvasExample" aria-controls="offcanvasExample">
