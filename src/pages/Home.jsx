@@ -1,7 +1,7 @@
 import React from 'react'
 import Banner from '../components/Banner'
-import About from '../components/About'
-import Services from '../components/Services'
+import AboutContent from '../components/AboutContent'
+import ServicesContent from '../components/ServicesContent'
 import Projects from '../components/Projects'
 import Choose from '../components/Choose'
 import Process from '../components/Process'
@@ -11,8 +11,8 @@ const Home = () => {
   return (
     <div>
       <Banner/>
-      <About/>
-      <Services/>
+      <AboutContent/>
+      <ServicesContent/>
       <Projects/>
       <Choose/>
       <Process/>

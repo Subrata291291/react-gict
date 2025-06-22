@@ -915,6 +915,9 @@ input:-internal-autofill-selected {
 
 /*Footer area*/
 .footer_area {
+    border-top: 3px solid #6ECDDD;
+}
+.footer_area {
   background: url(../images/banner-2.png) no-repeat;
   background-size: cover;
   background-position: center;

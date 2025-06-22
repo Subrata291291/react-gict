@@ -1,10 +1,12 @@
 import React from 'react'
-import CommonBanner from '../components/CommonBanner'
+import Projects from '../components/Projects'
+import ServicesContent from '../components/ServicesContent'
 
 const Services = () => {
   return (
     <div>
-      Service
+      <Projects/>
+      <ServicesContent/>
     </div>
   )
 }
