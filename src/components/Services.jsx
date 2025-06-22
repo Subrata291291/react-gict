@@ -59,7 +59,7 @@ const Services = () => {
   return (
     <section className="service_area position-relative" data-aos="fade-up">
       <div className="container">
-        <div className="title-box" data-aos="fade-right">
+        <div className="title-box text-left" data-aos="fade-right">
           <h4><span></span> Services we're offering</h4>
           <h3>Exclusive IT Services</h3>
         </div>
