@@ -18,7 +18,6 @@ const Home = () => {
       <Choose/>
       <Process/>
       <Counter/>
-      <Footer/>
     </div>
   )
 }
