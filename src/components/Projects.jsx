@@ -62,7 +62,7 @@ const sliderSettings = {
     },
     {
       breakpoint: 576,
-      settings: { slidesToShow: 1 },
+      settings: { slidesToShow: 1, arrows: false, },
     },
   ],
 };
