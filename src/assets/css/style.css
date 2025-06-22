@@ -862,6 +862,16 @@ img {
   color: #fff;
   font-weight: 300;
 }
+.form-select {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  border-radius: 0px;
+  font-size: 1.6rem;
+  padding-left: 0rem !important;
+  margin-top: 1rem;
+  background-color: transparent;
+  font-weight: 300;
+}
 
 .form-floating > label {
   color: #6ECDDD;
@@ -1182,7 +1192,7 @@ input:-internal-autofill-selected {
   width: 5rem;
   height: 5rem;
   text-align: center;
-  line-height: 2.7rem;
+  line-height: 2.9rem;
 }
 
 .contact-box li {
