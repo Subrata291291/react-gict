@@ -1,5 +1,6 @@
 import React from 'react';
-import logo from '../assets/images/logo.png'
+import { Link } from 'react-router-dom';
+import logo from '../assets/images/logo.png';
 
 const socialLinks = [
   { icon: 'fa-envelope', url: 'mailto:infogictsolutions@gmail.com' },
@@ -9,17 +10,17 @@ const socialLinks = [
 ];
 
 const shortLinks = [
-  { name: 'Home', url: '/' },
-  { name: 'Contact Us', url: '/contact-us' },
-  { name: 'Privacy Policy', url: '/privacy-policy' },
-  { name: 'Terms & Conditions', url: '/terms-conditions' },
+  { name: 'Home', path: '/' },
+  { name: 'Contact Us', path: '/contact' },
+  { name: 'Privacy Policy', path: '/privacy-policy' },
+  { name: 'Terms & Conditions', path: '/terms-conditions' },
 ];
 
 const helpLinks = [
-  { name: 'About', url: '/about' },
-  { name: 'Contact Us', url: '/contact-us' },
-  { name: 'Our Services', url: '/our-services' },
-  { name: 'Register', url: '#' },
+  { name: 'About', path: '/about' },
+  { name: 'Contact Us', path: '/contact' },
+  { name: 'Our Services', path: '/services' },
+  { name: 'Register', path: '/register' },
 ];
 
 const contactInfo = [
@@ -46,14 +47,13 @@ const Footer = () => {
     <section className="footer_area">
       <div className="container custom_container">
         <div className="row justify-content-between">
+
+          {/* Logo and About */}
           <div className="col-xxl-4 col-lg-4 col-sm-9 col-12 col-md-7">
             <div className="footer_content">
-              <a className="navbar-brand" href="/" title="Gict Solutions" rel="home">
-                <img
-                  src={logo}
-                  alt="Gict Solutions"
-                />
-              </a>
+              <Link className="navbar-brand" to="/" title="Gict Solutions" rel="home">
+                <img src={logo} alt="Gict Solutions" />
+              </Link>
               <p>
                 We’re certified professionals and trusted to take a proactive approach to your
                 technology and propel you forward.
@@ -70,32 +70,35 @@ const Footer = () => {
             </div>
           </div>
 
+          {/* Short Links */}
           <div className="col-xxl-2 col-lg-2 col-sm-5 col-6 col-md-5">
             <div className="footer_content">
               <h3>Short Link</h3>
               <ul>
                 {shortLinks.map((link, index) => (
                   <li key={index}>
-                    <a href={link.url}>{link.name}</a>
+                    <Link to={link.path}>{link.name}</Link>
                   </li>
                 ))}
               </ul>
             </div>
           </div>
 
+          {/* Help Links */}
           <div className="col-xxl-2 col-lg-2 col-sm-6 col-6 col-md-5 order-md-4">
             <div className="footer_content">
               <h3>Help Link</h3>
               <ul>
                 {helpLinks.map((link, index) => (
                   <li key={index}>
-                    <a href={link.url}>{link.name}</a>
+                    <Link to={link.path}>{link.name}</Link>
                   </li>
                 ))}
               </ul>
             </div>
           </div>
 
+          {/* Contact Info */}
           <div className="col-xxl-3 col-lg-4 col-sm-9 col-12 col-md-7 order-lg-4">
             <div className="footer_content contact_details">
               <h3>Contact Us</h3>
@@ -109,9 +112,11 @@ const Footer = () => {
               ))}
             </div>
           </div>
+
         </div>
       </div>
 
+      {/* Copyright */}
       <div className="footer_bottom text-center pt-25 pb-25">
         <p>Copyright © Gict-Solutions 2024. All Rights Reserved</p>
       </div>

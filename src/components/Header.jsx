@@ -85,10 +85,10 @@ const Header = () => {
                 <NavLink to="/about" className="nav-link">About</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/our-services" className="nav-link">Our Services</NavLink>
+                <NavLink to="/services" className="nav-link">Our Services</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/contact-us" className="nav-link">Contact Us</NavLink>
+                <NavLink to="/contact" className="nav-link">Contact Us</NavLink>
               </li>
             </ul>
           </div>
@@ -107,7 +107,7 @@ const Header = () => {
                   <NavLink to="/about" className="nav-link">About</NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink to="/our-services" className="nav-link">Our Services</NavLink>
+                  <NavLink to="/services" className="nav-link">Our Services</NavLink>
                 </li>
                 <li className="nav-item">
                   <NavLink to="/contact-us" className="nav-link">Contact Us</NavLink>

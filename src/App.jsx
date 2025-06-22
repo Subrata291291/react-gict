@@ -10,6 +10,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
+import Footer from './components/Footer';
 
 function App() {
   useEffect(() => {
@@ -33,6 +34,7 @@ function App() {
         <Route path="/our-services" element={<Services />} />
         <Route path="/contact-us" element={<Contact />} />
       </Routes>
+      <Footer/>
     </BrowserRouter>
   );
 }
