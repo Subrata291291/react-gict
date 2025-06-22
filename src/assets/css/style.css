@@ -1435,9 +1435,6 @@ input:-internal-autofill-selected {
     font-size: 2rem;
     margin-bottom: 1rem;
   }
-  .service_area .title-box {
-    text-align: center;
-  }
   .project_area .slick-dots li button:before {
     color: black;
   }
