@@ -49,6 +49,7 @@ const sliderSettings = {
       breakpoint: 576, // mobile
       settings: {
         slidesToShow: 1,
+        arrows: false,
       },
     },
   ],
