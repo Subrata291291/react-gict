@@ -851,6 +851,9 @@ img {
 }
 
 /*Form area*/
+.popup-modal .form-control {
+  color: #fff;
+}
 .form-control {
   border: none;
   border-bottom: 1px solid #ddd;
