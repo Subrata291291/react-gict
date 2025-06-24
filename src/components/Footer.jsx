@@ -19,7 +19,7 @@ const shortLinks = [
 const helpLinks = [
   { name: 'About', path: '/about' },
   { name: 'Contact Us', path: '/contact' },
-  { name: 'Our Services', path: '/our-services' },
+  { name: 'Our Services', path: '/services' },
   { name: 'Register', path: '/register' },
 ];
 
