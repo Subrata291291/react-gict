@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import contactFormData from '../data/ContactFormData';
+import contactFormData from '../data/contactFormData';
 import checkmark from '../assets/images/checkmark.gif';
 
 const contactDetails = {
