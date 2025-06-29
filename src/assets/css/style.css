@@ -859,7 +859,7 @@ img {
   padding-left: 0rem !important;
   margin-top: 1rem;
   background-color: transparent;
-  color: #fff;
+  color: #6ECDDD;
   font-weight: 300;
 }
 .form-select {
@@ -871,7 +871,7 @@ img {
   margin-top: 1rem;
   background-color: transparent;
   font-weight: 300;
-  color: #000;
+  color: #6ECDDD;
 }
 
 .form-floating > label {
