@@ -112,7 +112,7 @@ const Contact = () => {
                   <textarea name="query" value={formData.query} onChange={handleChange} className="form-control" rows="4" placeholder="Your Message"></textarea>
                 </div>
                 <div className="col-12 text-center">
-                  <button type="submit" className="submit_btn btn" disabled={loading}>
+                  <button type="submit" className="submit_btn button w-100" disabled={loading}>
                     {loading ? (
                       <>
                         <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>

@@ -139,7 +139,7 @@ const GlobalModal = () => {
                 </div>
               </div>
               <div className="text-center">
-                <button className="btn submit_btn" type="submit" disabled={loading}>
+                <button className="button w-100 submit_btn" type="submit" disabled={loading}>
                       {loading ? (
                         <>
                           <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
