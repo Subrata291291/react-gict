@@ -1,100 +1,124 @@
-import React from 'react';
+import React, { useState } from 'react';
+import contactFormData from '../data/ContactFormData';
+import checkmark from '../assets/images/checkmark.gif';
 
 const contactDetails = {
   phone: '7001906952',
   email: 'infogictsolutions@gmail.com',
   address: '576, Anandapur Main Rd, Golpark, Sector I, Kasba, Kolkata, West Bengal 700107',
-  mapSrc:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3685.7513169566923!2d88.40055022507588!3d22.51351172953384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02712b32cb41a9%3A0x3cfcc66bd5fbb833!2sRUBY%20GENERAL%20HOSPITAL%2C%20576%2C%20Anandapur%20Main%20Rd%2C%20Golpark%2C%20Sector%20I%2C%20Kasba%2C%20Kolkata%2C%20West%20Bengal%20700107!5e0!3m2!1sen!2sin!4v1716215919458!5m2!1sen!2sin',
 };
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    address: '',
+    phone: '',
+    service: '',
+    query: ''
+  });
+
+  const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwBkuBaZWks8a_XXLm0YO5UN3sriIuczhdjv2_-ht1d3LWjy4hPVb0TLE7LHyNyF0U/exec';
+    const form = new FormData();
+    Object.entries(formData).forEach(([key, value]) => form.append(key, value));
+
+    try {
+      await fetch(scriptURL, {
+        method: 'POST',
+        body: form
+      });
+
+      setFormData({ name: '', email: '', address: '', phone: '', service: '', query: '' });
+      setSubmitted(true);
+      setTimeout(() => setSubmitted(false), 3000);
+    } catch (error) {
+      console.error('Submission Error:', error.message);
+      alert('Submission failed. Please try again.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
+    <>
     <section className="contact-area p-60">
       <div className="container">
         <div className="row">
-          {/* Left Column */}
-          <div className="col-12 col-md-6 col-lg-6">
+          {/* Contact Info */}
+          <div className="col-md-6">
             <div className="contact-left">
-              <h3 className="contact-text">Contact Information</h3>
-              <p className="contact-para">
-                Fill the form below or write us. We will help you as soon as possible.
-              </p>
-              <ul className="d-flex contact-box">
-                <li>
-                  <p className="phone-icon">
-                    <i className="fa fa-volume-control-phone" aria-hidden="true"></i>
-                  </p>
-                  <h3>Phone</h3>
-                  <span>{contactDetails.phone}</span>
-                </li>
-                <li>
-                  <p className="phone-icon">
-                    <i className="fa fa-envelope" aria-hidden="true"></i>
-                  </p>
-                  <h3>Mail</h3>
-                  <span>{contactDetails.email}</span>
-                </li>
+              <h3 className='contact-text'>Contact Information</h3>
+              <p className='contact-para'>Fill the form below or write us. We will help you as soon as possible.</p>
+              <ul className="d-md-flex contact-box">
+                <li className='mb-4 mb-md-0'><p className='phone-icon'><i className="fa fa-volume-control-phone"></i></p><h3>Phone:</h3> <span>{contactDetails.phone}</span></li>
+                <li className='mb-4 mb-md-0'><p className='phone-icon'><i className="fa fa-envelope"></i></p><h3>Email:</h3> <span>{contactDetails.email}</span></li>
               </ul>
               <div className="address-area">
-                <ul className="d-flex jusify-content-between">
+                <ul className='d-flex gx-md-5'>
                   <li>
-                    <p className="map-icon">
-                      <i className="fa fa-map-marker" aria-hidden="true"></i>
-                    </p>
+                    <p className='map-icon'><i className="fa fa-map-marker"></i></p>
                   </li>
                   <li>
-                    <h3>Address</h3>
+                    <h3>Address:</h3>
                     <p>{contactDetails.address}</p>
                   </li>
                 </ul>
-                <iframe
-                  src={contactDetails.mapSrc}
-                  width="100%"
-                  height="200"
-                  style={{ border: 0 }}
-                  allowFullScreen=""
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Location Map"
-                ></iframe>
               </div>
+              <iframe
+                src={contactFormData.mapEmbedUrl}
+                width="100%" height="200" style={{ border: 0 }}
+                allowFullScreen="" loading="lazy" title="Location Map"
+              ></iframe>
             </div>
           </div>
 
-          {/* Right Column */}
-          <div className="col-12 col-md-6 col-lg-6">
+          {/* Form */}
+          <div className="col-md-6">
             <div className="contact-right">
               <h3 className="contact-heading text-center">Get In Touch</h3>
-              <form className="row g-3 mt-3">
+              <form className="row g-3 mt-3" onSubmit={handleSubmit}>
                 <div className="col-md-6">
-                  <input type="text" className="form-control" placeholder="Your Name" required />
+                  <input name="name" value={formData.name} onChange={handleChange} type="text" className="form-control" placeholder="Your Name" required />
                 </div>
                 <div className="col-md-6">
-                  <input type="email" className="form-control" placeholder="Email Address" required />
+                  <input name="email" value={formData.email} onChange={handleChange} type="email" className="form-control" placeholder="Email Address" required />
                 </div>
                 <div className="col-12">
-                  <input type="text" className="form-control" placeholder="Your Address" required />
+                  <input name="address" value={formData.address} onChange={handleChange} type="text" className="form-control" placeholder="Your Address" required />
                 </div>
                 <div className="col-md-6">
-                  <input type="tel" className="form-control" placeholder="Phone Number" required />
+                  <input name="phone" value={formData.phone} onChange={handleChange} type="tel" className="form-control" placeholder="Phone Number" required />
                 </div>
                 <div className="col-md-6">
-                  <select className="form-select" required>
+                  <select name="service" value={formData.service} onChange={handleChange} className="form-select form-control" required>
                     <option value="">Select a Service</option>
-                    <option value="Digital Marketing">Digital Marketing</option>
-                    <option value="Graphics Designing">Graphics Designing</option>
-                    <option value="Web Designing">Web Designing</option>
-                    <option value="Web Development">Web Development</option>
-                    <option value="Logo Design">Logo Design</option>
+                    {contactFormData.services.map((service, index) => (
+                      <option key={index} value={service}>{service}</option>
+                    ))}
                   </select>
                 </div>
                 <div className="col-12">
-                  <textarea className="form-control" rows="4" placeholder="Your Message"></textarea>
+                  <textarea name="query" value={formData.query} onChange={handleChange} className="form-control" rows="4" placeholder="Your Message"></textarea>
                 </div>
                 <div className="col-12 text-center">
-                  <button type="submit" className="submit_btn button">
-                    Send
+                  <button type="submit" className="submit_btn btn" disabled={loading}>
+                    {loading ? (
+                      <>
+                        <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                        Submitting...
+                      </>
+                    ) : 'Submit'}
                   </button>
                 </div>
               </form>
@@ -103,6 +127,23 @@ const Contact = () => {
         </div>
       </div>
     </section>
+    {/* ✅ Thank You Modal */}
+          {submitted && (
+            <div className="modal fade show d-block" style={{ backgroundColor: 'rgba(0,0,0,0.5)' }}>
+              <div className="modal-dialog modal-dialog-centered">
+                <div className="modal-content text-center">
+                  <div className="modal-header border-0">
+                    <button type="button" className="btn-close" onClick={() => setSubmitted(false)}></button>
+                  </div>
+                  <div className="modal-body pb-4">
+                    <img src={checkmark} alt="Thank you" width="100" />
+                    <h4 className="mt-3">Thanks for contacting us. We’ll get back to you shortly.</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+          </>
   );
 };
 

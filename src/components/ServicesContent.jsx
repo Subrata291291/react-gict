@@ -8,6 +8,8 @@ import shape9 from '../assets/images/shape-9.png'
 import shape10 from '../assets/images/shape-10.png'
 import shape11 from '../assets/images/shape-11.png'
 
+import { useModal } from '../context/ModalContext';
+
 const serviceData = [
   {
     title: 'Web Development',
@@ -56,6 +58,7 @@ const sliderSettings = {
 };
 
 const Services = () => {
+  const { openModal } = useModal();
   return (
     <section className="service_area position-relative" data-aos="fade-up">
       <div className="container">
@@ -80,7 +83,7 @@ const Services = () => {
                 <div className="service-content">
                   <h3 className="service-cat mt-4">{service.title}</h3>
                   <p className="servie-des mt-4 mb-4">{service.desc}</p>
-                  <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop" className="read-more">
+                  <a style={{ cursor: 'pointer' }} onClick={openModal} className="read-more">
                     Get Quote
                     <span><i className="fa fa-angle-double-right" aria-hidden="true"></i></span>
                   </a>

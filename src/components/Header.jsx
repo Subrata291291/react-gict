@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../assets/images/logo.png'
+import { useModal } from '../context/ModalContext';
 
 const Header = () => {
+  const { openModal } = useModal();
   const [dateTime, setDateTime] = useState(new Date());
 
   useEffect(() => {
@@ -123,7 +125,7 @@ const Header = () => {
               </button>
             </li> */}
             <li className="get-quote-btn d-lg-block d-md-block d-block">
-              <button data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              <button onClick={openModal}>
                 Get Quote <i className="fa fa-angle-right" aria-hidden="true"></i>
               </button>
             </li>
