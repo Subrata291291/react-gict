@@ -52,7 +52,7 @@ const Header = () => {
             <div className="col-lg-4 col-md-2">
               <div className="top-right">
                 <ul className="d-flex align-items-center">
-                  <li><a href="https://facebook.com" target="_blank" rel="noreferrer"><i className="fa fa-facebook"></i></a></li>
+                  <li><a href="https://www.facebook.com/profile.php?id=61560536847583" target="_blank" rel="noreferrer"><i className="fa fa-facebook"></i></a></li>
                   <li><a href="#"><i className="fa fa-instagram"></i></a></li>
                   <li><a href="#"><i className="fa fa-linkedin"></i></a></li>
                   <li><a href="#"><i className="fa fa-twitter"></i></a></li>
