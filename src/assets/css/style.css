@@ -949,8 +949,14 @@ input:-internal-autofill-selected {
 .footer_area .footer_content .social_link li a {
   color: #6ECDDD;
   padding: 10px 14px;
-  border-radius: 50px;
-  border: 1px solid;
+    border-radius: 50px;
+    border: 1px solid;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 .footer_area .footer_content .social_link li a::after {
   display: none;
