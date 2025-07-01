@@ -33,7 +33,7 @@ const Header = () => {
                       </a>
                     </p>
                   </li>
-                  <li>
+                  <li className='d-md-none d-lg-block'>
                     <p>
                       <span><i className="fa fa-clock"></i></span> 24/7 Customer Support
                     </p>
@@ -97,7 +97,9 @@ const Header = () => {
 
           <div className="offcanvas offcanvas-start d-lg-none d-md-none d-block" id="offcanvasExample" tabIndex="-1" aria-labelledby="offcanvasExampleLabel">
             <div className="offcanvas-header">
-              <h5 className="offcanvas-title" id="offcanvasExampleLabel">Gict Solutions</h5>
+              <h5 className="offcanvas-title" id="offcanvasExampleLabel">
+                <img src={logo} alt="Gict Solutions" />
+              </h5>
               <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div className="offcanvas-body">
