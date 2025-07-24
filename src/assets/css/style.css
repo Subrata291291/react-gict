@@ -851,9 +851,6 @@ img {
 }
 
 /*Form area*/
-.popup-modal .form-control {
-  color: #fff;
-}
 .form-control {
   border: none;
   border-bottom: 1px solid #ddd;
@@ -862,7 +859,7 @@ img {
   padding-left: 0rem !important;
   margin-top: 1rem;
   background-color: transparent;
-  color: #000;
+  color: #6ECDDD;
   font-weight: 300;
 }
 .form-select {
@@ -874,6 +871,7 @@ img {
   margin-top: 1rem;
   background-color: transparent;
   font-weight: 300;
+  color: #6ECDDD;
 }
 
 .form-floating > label {
@@ -891,14 +889,11 @@ img {
 }
 
 #floatingSelect {
-  font-size: 1.4rem !important;
   color: #6ECDDD;
   font-weight: 400;
 /*   padding: 1rem 0.75rem !important; */
 }
-.contact-heading {
-  margin-bottom: 5rem;
-}
+
 .form-floating > .form-control, .form-floating > .form-control-plaintext, .form-floating > .form-select {
   height: auto;
 }
@@ -954,8 +949,14 @@ input:-internal-autofill-selected {
 .footer_area .footer_content .social_link li a {
   color: #6ECDDD;
   padding: 10px 14px;
-  border-radius: 50px;
-  border: 1px solid;
+    border-radius: 50px;
+    border: 1px solid;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 .footer_area .footer_content .social_link li a::after {
   display: none;
@@ -1257,47 +1258,19 @@ input:-internal-autofill-selected {
   padding: 4rem;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-.thank-you-modal .modal-body {
-  padding: 1rem 2rem 4rem;
-}
+
 .contact-area .contact-heading {
   font-size: 3rem;
   color: #000;
 }
-.contact-area .spinner-border {
-  vertical-align: middle;
-}
+
 .contact-divider-pic {
   max-width: 300px;
   margin: 0 auto;
   display: flex;
   margin-bottom: 4rem;
 }
-.contact-right .form-floating > label {
-  color: #000;
-  font-size: 1.4rem;
-  padding: 0;
-}
-.contact-right .form-floating > select {
-  color: var(--ss-secondary);
-  padding-top: inherit !important;
-}
-.contact-right .message {
-  font-size: 1.7rem !important;
-}
-.form-floating>textarea:focus~label::after, .form-floating>textarea:not(:placeholder-shown)~label::after {
-  background-color: transparent;
-}
-.contact-right .form-control:focus {
-  box-shadow: 0 0 0 0rem rgba(13, 110, 253, 0.25);
-  background-color: transparent;
-}
-.contact-right #floatingSelect {
-  font-size: 1.4rem !important;
-  color: var(--ss-secondary);
-  font-weight: 400;
-  padding: 1rem 0.75rem !important;
-}
+
 .contact-right .submit_btn:hover {
   background-color: #000;
   color: #fff;

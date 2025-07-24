@@ -98,7 +98,7 @@ const Projects = () => {
                     rel="noopener noreferrer"
                     title="More Details"
                   >
-                    <span onClick={project.liveLink}>Live Link</span>
+                    <span>Live Link</span>
                   </a>
                 </div>
               </div>

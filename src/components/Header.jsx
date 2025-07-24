@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../assets/images/logo.png'
+import { useModal } from '../context/ModalContext';
 
 const Header = () => {
+  const { openModal } = useModal();
   const [dateTime, setDateTime] = useState(new Date());
 
   useEffect(() => {
@@ -31,7 +33,7 @@ const Header = () => {
                       </a>
                     </p>
                   </li>
-                  <li>
+                  <li className='d-md-none d-lg-block'>
                     <p>
                       <span><i className="fa fa-clock"></i></span> 24/7 Customer Support
                     </p>
@@ -50,7 +52,7 @@ const Header = () => {
             <div className="col-lg-4 col-md-2">
               <div className="top-right">
                 <ul className="d-flex align-items-center">
-                  <li><a href="https://facebook.com" target="_blank" rel="noreferrer"><i className="fa fa-facebook"></i></a></li>
+                  <li><a href="https://www.facebook.com/profile.php?id=61560536847583" target="_blank" rel="noreferrer"><i className="fa fa-facebook"></i></a></li>
                   <li><a href="#"><i className="fa fa-instagram"></i></a></li>
                   <li><a href="#"><i className="fa fa-linkedin"></i></a></li>
                   <li><a href="#"><i className="fa fa-twitter"></i></a></li>
@@ -90,12 +92,17 @@ const Header = () => {
               <li className="nav-item">
                 <NavLink to="/contact" className="nav-link">Contact Us</NavLink>
               </li>
+              <li className="nav-item">
+                <NavLink to="/quotation" className="nav-link">Get Quotation</NavLink>
+              </li>
             </ul>
           </div>
 
           <div className="offcanvas offcanvas-start d-lg-none d-md-none d-block" id="offcanvasExample" tabIndex="-1" aria-labelledby="offcanvasExampleLabel">
             <div className="offcanvas-header">
-              <h5 className="offcanvas-title" id="offcanvasExampleLabel">Gict Solutions</h5>
+              <h5 className="offcanvas-title" id="offcanvasExampleLabel">
+                <img src={logo} alt="Gict Solutions" />
+              </h5>
               <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div className="offcanvas-body">
@@ -112,6 +119,9 @@ const Header = () => {
                 <li className="nav-item">
                   <NavLink to="/contact-us" className="nav-link">Contact Us</NavLink>
                 </li>
+                <li className="nav-item">
+                  <NavLink to="/quotation" className="nav-link">Get Quotation</NavLink>
+                </li>
               </ul>
             </div>
           </div>
@@ -123,7 +133,7 @@ const Header = () => {
               </button>
             </li> */}
             <li className="get-quote-btn d-lg-block d-md-block d-block">
-              <button data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              <button onClick={openModal}>
                 Get Quote <i className="fa fa-angle-right" aria-hidden="true"></i>
               </button>
             </li>

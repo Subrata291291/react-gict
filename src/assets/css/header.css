@@ -480,6 +480,9 @@
 }
 
 @media screen and (max-width: 767px) {
+  .offcanvas-title img {
+    max-width: 15rem;
+  }
   .navbar-expand-md .navbar-nav {
     gap: 0rem;
   }

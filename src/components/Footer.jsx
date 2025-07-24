@@ -19,7 +19,7 @@ const shortLinks = [
 const helpLinks = [
   { name: 'About', path: '/about' },
   { name: 'Contact Us', path: '/contact' },
-  { name: 'Our Services', path: '/services' },
+  { name: 'Our Services', path: '/our-services' },
   { name: 'Register', path: '/register' },
 ];
 
@@ -44,54 +44,6 @@ const contactInfo = [
 const Footer = () => {
   return (
     <>
-      {/* Modal (Bootstrap 5 style - trigger it with a button elsewhere using data-bs-toggle) */}
-      <div className="modal fade form-modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div className="modal-dialog modal-dialog-centered">
-          <div className="modal-content shadow">
-            <div className="modal-header">
-              <h1 className="modal-title fs-5" id="staticBackdropLabel">Query Form</h1>
-              <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" />
-            </div>
-            <div className="modal-body">
-              <form action="thankyou.php" method="post">
-                <div className="container">
-                  <div className="form-row row">
-                    <div className="form-group col-md-6 form-floating mb-3">
-                      <input type="text" name="name" id="floatingInput1" placeholder="Name" className="form-control" autoComplete="off" required />
-                      <label htmlFor="floatingInput1">Your Name</label>
-                    </div>
-                    <div className="form-group col-md-6 form-floating mb-3">
-                      <input type="email" name="email" className="form-control" id="floatingInput2" placeholder="name@example.com" autoComplete="off" required />
-                      <label htmlFor="floatingInput2">Email address</label>
-                    </div>
-                    <div className="form-group col-md-6 form-floating mb-3">
-                      <input type="tel" name="phone" className="form-control" id="floatingInput3" placeholder="0000-0000-00" maxLength="10" autoComplete="off" required />
-                      <label htmlFor="floatingInput3">Phone Number</label>
-                    </div>
-                    <div className="form-group col-md-6 form-floating mb-3">
-                      <select className="form-select form-control" name="service" id="floatingSelect" aria-label="Service selection" required>
-                        <option value="">Select Service</option>
-                        <option value="Web Designing">Web Designing</option>
-                        <option value="Web Development">Web Development</option>
-                        <option value="Logo Design">Logo Design</option>
-                        <option value="Digital Marketing">Digital Marketing</option>
-                      </select>
-                    </div>
-                    <div className="form-floating mb-3">
-                      <textarea className="form-control" name="query" placeholder="Leave a comment here" id="floatingTextarea2" style={{ height: '100px' }} />
-                      <label htmlFor="floatingTextarea2">Comments</label>
-                    </div>
-                  </div>
-                  <div className="text-center">
-                    <button type="submit" name="submit" className="submit_btn button">Submit</button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Footer Section */}
       <section className="footer_area">
         <div className="container custom_container">

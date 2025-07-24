@@ -13,6 +13,10 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
+import Quotation from './pages/Quotation';
+
+import GlobalModal from './components/GlobalModal';
+import { ModalProvider } from './context/ModalContext';
 
 function Layout() {
   const location = useLocation();
@@ -20,6 +24,7 @@ function Layout() {
 
   return (
     <>
+    <ModalProvider>
       <Header />
       {showBanner && <CommonBanner />}
       <Routes>
@@ -27,8 +32,11 @@ function Layout() {
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/quotation" element={<Quotation/>} />
       </Routes>
       <Footer />
+      <GlobalModal />
+      </ModalProvider>
     </>
   );
 }
