@@ -1382,6 +1382,11 @@ input:-internal-autofill-selected {
     max-width: 100%;
   }
 }
+@media only screen and (min-width: 1700px) {
+.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  max-width: 1580px;
+}
+}
 @media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
   .bd-loader {
     transform: scale(0.8);
