@@ -472,7 +472,7 @@ img {
   font-size: 4rem;
   background-color: #6ECDDD;
   padding: 0.6rem 2rem;
-  border-radius: 5rem;
+  /* border-radius: 5rem; */
   text-align: center;
 }
 .service_area .slick-next.slick-arrow {
@@ -485,7 +485,7 @@ img {
   font-size: 4rem;
   background-color: #6ECDDD;
   padding: 0.6rem 2rem;
-  border-radius: 5rem;
+  /* border-radius: 5rem; */
   text-align: center;
 }
 .service_area .title-box {
@@ -572,7 +572,7 @@ img {
   font-size: 4rem;
   background-color: none;
   padding: 0.6rem 2rem;
-  border-radius: 5rem;
+  /* border-radius: 5rem; */
   border: 1px solid #000;
   text-align: center;
   color: #000;
@@ -587,7 +587,7 @@ img {
   font-size: 4rem;
   background-color: none;
   padding: 0.6rem 2rem;
-  border-radius: 5rem;
+  /* border-radius: 5rem; */
   border: 1px solid #000;
   text-align: center;
   color: #000;
