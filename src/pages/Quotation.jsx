@@ -177,7 +177,7 @@ const QuotationForm = () => {
             <tbody>
                 <tr>
                 <td>Design & Development</td>
-                <td>₹ 17,000</td>
+                <td>₹ XX,XXX</td>
                 </tr>
                 <tr>
                 <td>Domain & Hosting (Extra Charge)</td>
@@ -189,7 +189,7 @@ const QuotationForm = () => {
                 </tr>
                 <tr>
                 <th scope="row">Total</th>
-                <td colspan="2"><b>₹ 17,000</b></td>
+                <td colspan="2"><b>₹ XX,XXX</b></td>
                 </tr>
             </tbody>
         </table>
