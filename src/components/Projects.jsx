@@ -8,11 +8,15 @@ import project2 from '../assets/images/makeup.jpg';
 import project2Large from '../assets/images/makeup.png';
 import project3 from '../assets/images/echoshop.jpg';
 import project3Large from '../assets/images/echoshop.png';
-import project4 from '../assets/images/petmenia.jpg';
-import project4Large from '../assets/images/petmenia.png';
-import project5 from '../assets/images/petmenia.jpg';
-import project5Large from '../assets/images/petmenia.png';
-// 👉 Add more as needed...
+import project4 from '../assets/images/travel.png';
+import project4Large from '../assets/images/travelLarge.png';
+import pawcrush from '../assets/images/pawcrush.png';
+import pawcrushLarge from '../assets/images/pawcrushLarge.png';
+import music from '../assets/images/music.png';
+import musicLarge from '../assets/images/musicLarge.png';
+import portfolio from '../assets/images/portfolio.png';
+import portfolioLarge from '../assets/images/portfolioLarge.png';
+
 
 const projects = [
   {
@@ -25,7 +29,7 @@ const projects = [
     title: 'Makeup',
     image: project2,
     largeImage: project2Large,
-    liveLink: 'http://mydem03.unaux.com',
+    liveLink: 'https://makeoverbynandita.com/',
   },
   {
     title: 'EchoShop',
@@ -40,11 +44,23 @@ const projects = [
     liveLink: 'http://mydem06.unaux.com',
   },
   {
-    title: 'Petmenia',
-    image: project5,
-    largeImage: project5Large,
-    liveLink: 'http://mydem06.unaux.com',
-  }
+    title: 'Pawcrush',
+    image: pawcrush,
+    largeImage: pawcrushLarge,
+    liveLink: 'https://pawcrush.in',
+  },
+  {
+    title: 'Music',
+    image: music,
+    largeImage: musicLarge,
+    liveLink: 'https://musicsbox.netlify.app',
+  },
+  {
+    title: 'Portfolio',
+    image: portfolio,
+    largeImage: portfolioLarge,
+    liveLink: 'https://subratahaldar.netlify.app',
+  },
 ];
 
 const sliderSettings = {
