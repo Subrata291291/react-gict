@@ -5,6 +5,8 @@ const routeNames = {
   '/about': 'About',
   '/services': 'Our Services',
   '/contact': 'Contact Us',
+  '/academy': 'Gict Academy',
+  '/quotation': 'Gict Quotation',
 };
 
 const CommonBanner = () => {
