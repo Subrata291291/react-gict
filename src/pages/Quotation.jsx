@@ -120,8 +120,8 @@ const QuotationForm = () => {
           <label htmlFor="deadline">Expected Delivery Deadline</label>
           <input type="date" id="deadline" value={formData.deadline} onChange={handleChange} required />
 
-          <label htmlFor="budget">Estimated Budget (INR)</label>
-          <input type="number" id="budget" value={formData.budget} onChange={handleChange} required />
+          {/* <label htmlFor="budget">Estimated Budget (INR)</label>
+          <input type="number" id="budget" value={formData.budget} onChange={handleChange} required /> */}
 
           <label htmlFor="notes">Any Other Notes or Expectations</label>
           <textarea id="notes" value={formData.notes} onChange={handleChange} rows="3" />
