@@ -16,7 +16,12 @@ import music from '../assets/images/music.png';
 import musicLarge from '../assets/images/musicLarge.png';
 import portfolio from '../assets/images/portfolio.png';
 import portfolioLarge from '../assets/images/portfolioLarge.png';
-
+import vincent from '../assets/images/vincent.jpg';
+import vincentLarge from '../assets/images/vincent.png';
+import saluja from '../assets/images/saluja.jpg';
+import salujaLarge from '../assets/images/saluja.png';
+import photography from '../assets/images/photography.jpg';
+import photographyLarge from '../assets/images/photography.png';
 
 const projects = [
   {
@@ -61,6 +66,24 @@ const projects = [
     largeImage: portfolioLarge,
     liveLink: 'https://subratahaldar.netlify.app',
   },
+  {
+    title: 'Vincent',
+    image: vincent,
+    largeImage: vincentLarge,
+    liveLink: 'https://vincentarenabooking.com/',
+  },
+  {
+    title: 'Saluja',
+    image: saluja,
+    largeImage: salujaLarge,
+    liveLink: 'https://react-automobile.netlify.app/',
+  },
+  {
+    title: 'Photography',
+    image: photography,
+    largeImage: photographyLarge,
+    liveLink: 'https://react-photography.netlify.app/',
+  }
 ];
 
 const sliderSettings = {
