@@ -29,61 +29,68 @@ const QuotationForm = () => {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    if (!formData.agreeTerms) {
-      alert("Please agree to the terms before submitting.");
-      return;
-    }
+  if (!formData.agreeTerms) {
+    alert("Please agree to the terms before submitting.");
+    return;
+  }
 
-    setIsSubmitting(true);
+  setIsSubmitting(true);
 
-    const form = new FormData();
-    Object.keys(formData).forEach((key) => {
-      form.append(key, formData[key]);
+  const urlParams = new URLSearchParams(window.location.search);
+
+  const ipData = await fetch("https://script.google.com/macros/s/AKfycbyncreJF_rg6r_ZO2LQcmftW76mFHp0aZjzxz4vzyp0OwLiiGFpWwIlKHlTEhqMnIkk/exec")
+    .then(res => res.json())
+    .catch(() => ({ ip: "Not Captured" }));
+
+  const form = new FormData();
+
+  Object.keys(formData).forEach((key) => {
+    form.append(key, formData[key]);
+  });
+
+  form.append("ip", ipData.ip);
+  form.append("utm_source", urlParams.get("utm_source") || "");
+  form.append("utm_medium", urlParams.get("utm_medium") || "");
+  form.append("utm_campaign", urlParams.get("utm_campaign") || "");
+
+  try {
+    await fetch("https://script.google.com/macros/s/AKfycbyncreJF_rg6r_ZO2LQcmftW76mFHp0aZjzxz4vzyp0OwLiiGFpWwIlKHlTEhqMnIkk/exec", {
+      method: "POST",
+      body: form,
     });
 
-    fetch('https://script.google.com/macros/s/AKfycbx8LzUNf0s5-Nq5DDh5gVt1z-GaaRRTJpDKAg--3FNXy-Ug6yQsMXPIr5pO6pENd4U1UQ/exec', {
-      method: 'POST',
-      body: form,
-    })
-      .then((res) => res.text())
-      .then(() => {
-        setFormData({
-          clientName: '',
-          email: '',
-          phone: '',
-          service: '',
-          requirements: '',
-          colors: '',
-          features: '',
-          deadline: '',
-          budget: '',
-          notes: '',
-          agreeTerms: false,
-        });
-        setIsSubmitting(false);
-        setSubmitted(true);
-        setTimeout(() => setSubmitted(false), 3000);
+    setFormData({
+      clientName: '',
+      email: '',
+      phone: '',
+      service: '',
+      requirements: '',
+      colors: '',
+      features: '',
+      deadline: '',
+      notes: '',
+      agreeTerms: false,
+    });
 
-        if (window.bootstrap && document.getElementById('thankYouModal')) {
-          const thankYouModal = new window.bootstrap.Modal(document.getElementById('thankYouModal'));
-          thankYouModal.show();
-        }
-      })
-      .catch((err) => {
-        setIsSubmitting(false);
-        alert('There was an error submitting the form.');
-        console.error(err);
-      });
-  };
+    setIsSubmitting(false);
+    setSubmitted(true);
+    setTimeout(() => setSubmitted(false), 3000);
+
+  } catch (error) {
+    setIsSubmitting(false);
+    alert("There was an error submitting the form.");
+  }
+};
 
   return (
     <section className="quotation-area p-70" id="quotation">
       <div className="container">
         {/* <h2 className="title">Web Development Quotation Request Form</h2> */}
         <form onSubmit={handleSubmit}>
+          <input type="text" name="website" style={{ display: "none" }} />
           <label htmlFor="clientName">Client Name / Company</label>
           <input type="text" id="clientName" value={formData.clientName} onChange={handleChange} required />
 
