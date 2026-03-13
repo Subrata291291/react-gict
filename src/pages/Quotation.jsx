@@ -7,7 +7,7 @@ const QuotationForm = () => {
     clientName: '',
     email: '',
     phone: '',
-    projectType: '',
+    service: '',
     requirements: '',
     colors: '',
     features: '',
@@ -41,7 +41,7 @@ const QuotationForm = () => {
 
   const urlParams = new URLSearchParams(window.location.search);
 
-  const ipData = await fetch("https://script.google.com/macros/s/AKfycbyncreJF_rg6r_ZO2LQcmftW76mFHp0aZjzxz4vzyp0OwLiiGFpWwIlKHlTEhqMnIkk/exec")
+  const ipData = await fetch("https://script.google.com/macros/s/AKfycbwP5cyS7QmP9Bjg_4mXsMzSJrtoVcDmAlv0QhJae9i3QKY2JMFO-keHuSefmuuKuB30MQ/exec")
     .then(res => res.json())
     .catch(() => ({ ip: "Not Captured" }));
 
@@ -51,13 +51,17 @@ const QuotationForm = () => {
     form.append(key, formData[key]);
   });
 
+  // extra fields for sheet
+  form.append("name", formData.clientName);
+  form.append("query", "Quotation Request");
+
   form.append("ip", ipData.ip);
   form.append("utm_source", urlParams.get("utm_source") || "");
   form.append("utm_medium", urlParams.get("utm_medium") || "");
   form.append("utm_campaign", urlParams.get("utm_campaign") || "");
 
   try {
-    await fetch("https://script.google.com/macros/s/AKfycbyncreJF_rg6r_ZO2LQcmftW76mFHp0aZjzxz4vzyp0OwLiiGFpWwIlKHlTEhqMnIkk/exec", {
+    await fetch("https://script.google.com/macros/s/AKfycbwP5cyS7QmP9Bjg_4mXsMzSJrtoVcDmAlv0QhJae9i3QKY2JMFO-keHuSefmuuKuB30MQ/exec", {
       method: "POST",
       body: form,
     });
@@ -71,6 +75,7 @@ const QuotationForm = () => {
       colors: '',
       features: '',
       deadline: '',
+      budget: '',
       notes: '',
       agreeTerms: false,
     });
@@ -127,8 +132,8 @@ const QuotationForm = () => {
           <label htmlFor="deadline">Expected Delivery Deadline</label>
           <input type="date" id="deadline" value={formData.deadline} onChange={handleChange} required />
 
-          {/* <label htmlFor="budget">Estimated Budget (INR)</label>
-          <input type="number" id="budget" value={formData.budget} onChange={handleChange} required /> */}
+          <label htmlFor="budget">Estimated Budget (INR)</label>
+          <input type="number" id="budget" value={formData.budget} onChange={handleChange} required />
 
           <label htmlFor="notes">Any Other Notes or Expectations</label>
           <textarea id="notes" value={formData.notes} onChange={handleChange} rows="3" />
