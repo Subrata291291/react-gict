@@ -209,28 +209,25 @@ img {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 50rem;
 }
 .banner_area .slider-2 {
   background: url(../images/banner-2.png) no-repeat;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 50rem;
 }
 .banner_area .slider-3 {
   background: url(../images/banner-3.png) no-repeat;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 50rem;
 }
-.banner_area .slick-dots li.slick-active button:before {
+/* .banner_area .slick-dots li.slick-active button:before {
   opacity: 1;
   color: #fff;
   background-color: #6ECDDD;
   border-radius: 5rem;
-}
+} */
 .banner_area .banner_box {
   max-width: 60rem;
   color: #fff;
@@ -241,6 +238,12 @@ img {
   font-weight: 300;
   margin-bottom: 2rem;
   line-height: 3.5rem;
+}
+.banner_area .banner_box p {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin: 2rem 0rem;
+  line-height: 3rem;
 }
 .banner_area .banner_box h3 {
   text-transform: uppercase;
@@ -264,7 +267,7 @@ img {
 .banner_area .slick-dots li {
   display: block;
   left: 30px;
-  margin: 20px 0px;
+  margin: 10px 0px;
 }
 .banner_area .slick-dots li button:before {
   font-size: 12px;
@@ -501,12 +504,12 @@ img {
 .service_area .slick-dotted.slick-slider {
   margin-bottom: 0px !important;
 }
-.service_area .slick-dots li.slick-active button:before {
+/* .service_area .slick-dots li.slick-active button:before {
   opacity: 1;
   color: #fff;
   background-color: #6ECDDD;
   border-radius: 5rem;
-}
+} */
 .service_area .slick-dots {
   bottom: -4rem;
 }

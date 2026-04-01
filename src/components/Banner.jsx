@@ -11,6 +11,7 @@ const slides = [
     id: 1,
     subtitle: 'Technology Consultancy',
     title: 'Make the Easiest Solutions for you',
+    desc: 'We are a leading web development company delivering modern, scalable, and high-performance websites tailored to your business needs. From design to deployment, we help you build a strong digital presence.',
     shape1: shape1,
     shape2: shape4,
     shape3: shape5,
@@ -19,6 +20,7 @@ const slides = [
     id: 2,
     subtitle: 'UI/UX Technology Solutions',
     title: 'Empowering Your Business with us',
+    desc: 'We are a leading web development company delivering modern, scalable, and high-performance websites tailored to your business needs. From design to deployment, we help you build a strong digital presence.',
     shape1: shape1,
     shape2: shape4,
     shape3: shape5,
@@ -27,6 +29,7 @@ const slides = [
     id: 3,
     subtitle: 'Web Development Consultancy',
     title: 'Make the Easiest Solutions for you',
+    desc: 'We are a leading web development company delivering modern, scalable, and high-performance websites tailored to your business needs. From design to deployment, we help you build a strong digital presence.',
     shape1: shape1,
     shape2: shape4,
     shape3: shape5,
@@ -59,6 +62,7 @@ const Banner = () => {
                   <span></span> {slide.subtitle}
                 </h4>
                 <h3>{slide.title}</h3>
+                <p>{slide.desc}</p>
                 <button className="button btn order-btn" onClick={() => navigate('/about')}>Check Us</button>
               </div>
             </div>

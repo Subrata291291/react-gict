@@ -87,7 +87,7 @@ const projects = [
 ];
 
 const sliderSettings = {
-  dots: true,
+  dots: false,
   arrows: true,
   infinite: true,
   centerMode: true,
