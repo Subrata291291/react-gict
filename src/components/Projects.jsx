@@ -22,6 +22,8 @@ import saluja from '../assets/images/saluja.jpg';
 import salujaLarge from '../assets/images/saluja.png';
 import photography from '../assets/images/photography.jpg';
 import photographyLarge from '../assets/images/photography.png';
+import vincentarena from '../assets/images/vincentacademy.png';
+import VincentArenaLarge from '../assets/images/vincentacademyLg.png';
 
 const projects = [
   {
@@ -83,6 +85,12 @@ const projects = [
     image: photography,
     largeImage: photographyLarge,
     liveLink: 'https://react-photography.netlify.app/',
+  },
+  {
+    title: 'VincentArena',
+    image: vincentarena,
+    largeImage: VincentArenaLarge,
+    liveLink: 'https://stvincentcbseburdwan.org/',
   }
 ];
 
